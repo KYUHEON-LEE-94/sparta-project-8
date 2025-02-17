@@ -15,7 +15,7 @@ COPY --from=builder /app/build/libs/*.jar app1.jar
 RUN mkdir -p /app/logs
 
 ENV SPRING_PROFILES_ACTIVE=prod
-ENV SERVER_PORT=8083
+ENV SERVER_PORT=8084
 
-EXPOSE 8083
+EXPOSE 8084
 ENTRYPOINT ["java", "-jar", "app1.jar"]
