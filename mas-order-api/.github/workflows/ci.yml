@@ -22,7 +22,7 @@ jobs:
 
       - name: Run Web Server Container
         run: |
-          docker run -d -p 8080:80 --name webserver httpd:latest
+          docker run -d -p 8083:80 --name webserver httpd:latest
 
       - name: Wait for Web Server to Start
         run: |
@@ -30,7 +30,7 @@ jobs:
 
       - name: Test Web Server Response
         run: |
-          curl -I http://localhost:8080 | grep "200 OK"
+          curl -I http://localhost:8083 | grep "200 OK"
 
       - name: Stop and Remove Container
         run: |
