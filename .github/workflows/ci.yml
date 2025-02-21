@@ -3,14 +3,14 @@ name: Web Server CI
 on:
   push:
     branches:
-      - main
+      - master
     paths:
       - "order-api/**"
       - "payment-api/**"
       - "product-api/**"
   pull_request:
     branches:
-      - main
+      - master
     paths:
       - "mas-order-api/**"
       - "mas-payment-api/**"
